@@ -1,5 +1,8 @@
 # Granite Edge Cache — Speed & SEO
 
+**[Live page](https://awarenessbrecrack.github.io/granite-edge-cache/)** · **[Download](https://github.com/Awarenessbrecrack/granite-edge-cache/releases/latest)** · free · MIT · no account
+
+
 ![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759b?logo=wordpress&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-777bb3?logo=php&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/license-MIT-3da639)
