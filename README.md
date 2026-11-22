@@ -6,7 +6,7 @@
 
 Most speed plugins sell a dashboard. Granite Edge Cache writes static HTML, strips the whitespace nobody reads, converts images to modern formats and prunes the tables that grow every day — then shows the counters it recorded while doing it.
 
-## open source wordpress clear cache
+## github wordpress plugins speed
 
 That is the query this plugin answers. The sections below follow the same order an administrator works in: cache first, then the output, then the database, then the things that keep a site from getting slow again.
 
@@ -50,33 +50,33 @@ The benchmark is the only feature that talks to the network. It is off until you
 
 *Cache hit rate, average load and cache size after a week of traffic*
 
-![cache](screenshots/cache.png)
+![admin-menu](screenshots/admin-menu.png)
 
-*Cache TTL, exclusions and manual purge*
+*Sidebar entry in a normal WordPress admin*
 
-![optimize](screenshots/optimize.png)
+![database](screenshots/database.png)
 
-*HTML, CSS and JS optimization with image handling*
-
-![diagnostics](screenshots/diagnostics.png)
-
-*Environment check without any secrets*
-
-![front-end-mobile](screenshots/front-end-mobile.png)
-
-*Front end at 390 px*
+*Revision ageing, orphan meta and table sizes*
 
 ![plugins-list](screenshots/plugins-list.png)
 
 *Installed next to a security plugin, no conflicts*
 
+![cloud](screenshots/cloud.png)
+
+*Optional benchmark with a score and recommendations*
+
+![cache](screenshots/cache.png)
+
+*Cache TTL, exclusions and manual purge*
+
 ## Install
 
 **Three ways in**
 
-- **Release ZIP** — `granite-edge-cache-1.0.0.zip` from [releases](https://github.com/Awarenessbrecrack/granite-edge-cache/releases/latest), then *Plugins → Add New → Upload Plugin*.
+- **Release ZIP** — `granite-edge-cache-1.0.1.zip` from [releases](https://github.com/Awarenessbrecrack/granite-edge-cache/releases/latest), then *Plugins → Add New → Upload Plugin*.
 - **Git clone** — `git clone https://github.com/Awarenessbrecrack/granite-edge-cache wp-content/plugins/granite-edge-cache`, then activate.
-- **WP-CLI** — `wp plugin install https://github.com/Awarenessbrecrack/granite-edge-cache/releases/latest/download/granite-edge-cache-1.0.0.zip --activate`
+- **WP-CLI** — `wp plugin install https://github.com/Awarenessbrecrack/granite-edge-cache/releases/latest/download/granite-edge-cache-1.0.1.zip --activate`
 
 ## Configuration
 
