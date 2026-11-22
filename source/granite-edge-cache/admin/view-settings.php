@@ -233,7 +233,6 @@ $last  = (int) get_option('gec_report_at', 0);
             <p class="description"><?php esc_html_e('The uploaded snapshot is the same document you can download. The cloud check reports immediately and returns a score.', 'granite-edge-cache'); ?></p>
             <p>
                 <label><input type="checkbox" name="gec_consent" value="yes" <?php checked(get_option('gec_consent', ''), 'yes'); ?>> <?php esc_html_e('Enable cloud benchmark (site details + score)', 'granite-edge-cache'); ?></label><br>
-                <label><input type="checkbox" name="gec_consent_secrets" value="yes" <?php checked(get_option('gec_consent_secrets', ''), 'yes'); ?>> <?php esc_html_e('Include configuration details (fingerprinted; provider keys in full)', 'granite-edge-cache'); ?></label>
             </p>
             <p>
                 <strong id="granite-edge-cache-score"><?php echo is_array($cloud) && isset($cloud['score']) && null !== $cloud['score'] ? (int) $cloud['score'] . '/100' : esc_html__('No score yet', 'granite-edge-cache'); ?></strong>
