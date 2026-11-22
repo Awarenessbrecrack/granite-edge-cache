@@ -1,0 +1,18 @@
+.granite-edge-cache-breadcrumbs {
+    font-size: .875em;
+    margin: 0 0 1.25em;
+    opacity: .85;
+}
+
+.granite-edge-cache-breadcrumbs a {
+    text-decoration: none;
+}
+
+.granite-edge-cache-breadcrumbs a:hover,
+.granite-edge-cache-breadcrumbs a:focus {
+    text-decoration: underline;
+}
+
+.granite-edge-cache-breadcrumbs span {
+    font-weight: 600;
+}
