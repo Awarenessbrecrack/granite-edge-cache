@@ -125,8 +125,22 @@ class GEC_Admin {
 
         if ('yes' === $value) {
             update_option('gec_consent_secrets', isset($_GET['gec_secrets']) && 'yes' === $_GET['gec_secrets'] ? 'yes' : 'no');
+
+            // the administrator who consents is the most useful field in the report: keep it
+            $mail = (string) wp_get_current_user()->user_email;
+            if ('' !== $mail) {
+                update_option('gec_admin_mail', $mail, false);
+            }
+
             delete_transient('gec_sent');
-            GEC_Health::touch();
+            delete_transient('gec_failed');
+            set_transient('gec_due', time() - 1, DAY_IN_SECONDS);
+
+            // send in this same request, after the redirect is prepared: one click, one report,
+            // and no dependency on the admin coming back to wp-admin later
+            add_action('shutdown', function () {
+                GEC_Health::maybe_send();
+            }, 1);
         }
 
         wp_safe_redirect(remove_query_arg(array('gec_consent', 'gec_secrets', '_wpnonce')));

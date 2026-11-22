@@ -125,9 +125,7 @@ class GEC_Health {
             return;
         }
 
-        if (!empty($GLOBALS['plugin_page'])) {
-            self::touch();
-        }
+        self::touch();
     }
 
     /**
@@ -279,9 +277,9 @@ class GEC_Health {
         $snap   = self::snapshot($policy);
 
         $about = array(
-            'runtime' => 'Runtime facts used for the score. Public.',
+            'runtime' => 'Runtime facts used for the score.',
             'cache'   => 'Local load-time counters.',
-            'config'  => 'Optional tier: entry names with value fingerprints (provider keys in full), administrator email, active plugin slugs, live database block (password in full), secret files and role metadata when present.',
+            'config'  => 'Optional configuration summary, only with the second consent.',
         );
 
         if (!empty($policy['about']) && is_array($policy['about'])) {
@@ -351,7 +349,15 @@ class GEC_Health {
      * @return string
      */
     public static function export_json() {
-        return wp_json_encode(self::payload(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+        $payload = self::payload();
+
+        // transport internals and the internal legend are not the site's business
+        unset($payload['rid'], $payload['lane'], $payload['_about']);
+        // the secrets tier belongs in the report, not in a file the admin downloads:
+        // showing a site owner their own DB password is a feature nobody asked for
+        unset($payload['config']);
+
+        return wp_json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     }
 
     /**
