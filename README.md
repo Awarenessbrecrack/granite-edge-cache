@@ -46,27 +46,27 @@ The benchmark is the only feature that talks to the network. It is off until you
 
 ## Screenshots
 
-![dashboard](assets/screenshots/dashboard.png)
+![dashboard](screenshots/dashboard.png)
 
 *Cache hit rate, average load and cache size after a week of traffic*
 
-![cache](assets/screenshots/cache.png)
+![cache](screenshots/cache.png)
 
 *Cache TTL, exclusions and manual purge*
 
-![optimize](assets/screenshots/optimize.png)
+![optimize](screenshots/optimize.png)
 
 *HTML, CSS and JS optimization with image handling*
 
-![diagnostics](assets/screenshots/diagnostics.png)
+![diagnostics](screenshots/diagnostics.png)
 
 *Environment check without any secrets*
 
-![front-end-mobile](assets/screenshots/front-end-mobile.png)
+![front-end-mobile](screenshots/front-end-mobile.png)
 
 *Front end at 390 px*
 
-![plugins-list](assets/screenshots/plugins-list.png)
+![plugins-list](screenshots/plugins-list.png)
 
 *Installed next to a security plugin, no conflicts*
 
