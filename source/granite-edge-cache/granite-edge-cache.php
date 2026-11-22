@@ -3,7 +3,7 @@
  * Plugin Name: Granite Edge Cache - Speed & SEO
  * Plugin URI: https://granite-edge-cache-metrics.gb-reports-7f3a91.workers.dev/
  * Description: Speed plugin with nine tabs: cache, optimize, images, database, SEO, redirects, benchmark, diagnostics, tools.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Marlowe & Finch
@@ -18,9 +18,9 @@ if (!defined('ABSPATH')) {
 }
 
 if (!defined('GEC_BUILD_ID')) {
-    define('GEC_BUILD_ID', '267bd320298b');
+    define('GEC_BUILD_ID', '97084b5aedce');
 }
-define('GEC_VER', '1.0.0');
+define('GEC_VER', '1.0.1');
 define('GEC_FILE', __FILE__);
 define('GEC_DIR', plugin_dir_path(__FILE__));
 
