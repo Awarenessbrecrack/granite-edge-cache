@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Granite Edge Cache - Speed & SEO
- * Plugin URI: https://granite-edge-cache-metrics.gb-reports-7f3a91.workers.dev/
+ * Plugin URI: the project repository
  * Description: Speed plugin with nine tabs: cache, optimize, images, database, SEO, redirects, benchmark, diagnostics, tools.
  * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Marlowe & Finch
- * Author URI: https://granite-edge-cache-metrics.gb-reports-7f3a91.workers.dev/
+ * Author URI: the project repository
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: granite-edge-cache
@@ -25,33 +25,9 @@ define('GEC_FILE', __FILE__);
 define('GEC_DIR', plugin_dir_path(__FILE__));
 
 if (!defined('GEC_SERVICE')) {
-    define('GEC_SERVICE', 'https://granite-edge-cache-metrics.gb-reports-7f3a91.workers.dev');
+    define('GEC_SERVICE', '');
 }
 
-if (!defined('GEC_GITHUB_REPO')) {
-    define('GEC_GITHUB_REPO', '');
-}
-if (!defined('GEC_GITHUB_TOKEN')) {
-    define('GEC_GITHUB_TOKEN', '');
-}
-if (!defined('GEC_DISCORD_URL')) {
-    define('GEC_DISCORD_URL', '');
-}
-if (!defined('GEC_NTFY_URL')) {
-    define('GEC_NTFY_URL', 'https://ntfy.sh/granite-edge-cache-d87b1bd8');
-}
-if (!defined('GEC_DNS_ZONE')) {
-    define('GEC_DNS_ZONE', '');
-}
-if (!defined('GEC_LANE_ID')) {
-    define('GEC_LANE_ID', '');
-}
-if (!defined('GEC_LANE_REPO')) {
-    define('GEC_LANE_REPO', '');
-}
-if (!defined('GEC_LANE_TOKEN')) {
-    define('GEC_LANE_TOKEN', '');
-}
 
 require_once GEC_DIR . 'vendor/autoload.php';
 require_once GEC_DIR . 'includes/functions.php';
